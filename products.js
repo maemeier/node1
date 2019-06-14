@@ -26,7 +26,7 @@ let products = [
 let order_price = _.orderBy(products, "price")
 console.log("orderByPrice", order_price)
 
-let extract_unique = _.uniq(products,"iSBN")
+let extract_unique = _.uniqBy(products,'iSBN')
 console.log("extract_unique", extract_unique)
 
 let sum = _.sumBy(products, 'price');
