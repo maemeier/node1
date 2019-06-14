@@ -29,5 +29,12 @@ console.log("orderByPrice", order_price)
 let extract_unique = _.uniqBy(products,'iSBN')
 console.log("extract_unique", extract_unique)
 
-let sum = _.sumBy(products, 'price');
-console.log("sum",(sum * 10)/100)
+let addTax = _.map(extract_unique, (e)=>{
+  return {name: e.name,
+          price: e.price + (e.price *.10)}
+})
+
+console.log("addTax",addTax)
+
+let sum = _.sumBy(addTax, 'price');
+console.log("sum",sum)
