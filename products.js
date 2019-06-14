@@ -30,4 +30,4 @@ let extract_unique = _.uniqBy(products,'iSBN')
 console.log("extract_unique", extract_unique)
 
 let sum = _.sumBy(products, 'price');
-console.log("sum", sum)
+console.log("sum",(sum * 10)/100)
